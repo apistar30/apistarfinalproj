@@ -42,13 +42,13 @@ export class PostService {
     this.listOfPosts.splice(index, 1);
   
     // Now delete the post from Firebase
-    this.http.delete(`https://apistarfinalproj-default-rtdb.asia-southeast1.firebasedatabase.app/posts/${index}.json`).subscribe(() => {
+    this.http.delete(`https://gutierrez-firebase-default-rtdb.asia-southeast1.firebasedatabase.app/posts/${index}.json`).subscribe(() => {
       console.log('Post deleted from Firebase');
     });
   }
   addPost(post: Post) {
     this.listOfPosts.push(post);
-    this.http.put(`https://apistarfinalproj-default-rtdb.asia-southeast1.firebasedatabase.app/posts.json`, this.listOfPosts)
+    this.http.put(`https://gutierrez-firebase-default-rtdb.asia-southeast1.firebasedatabase.app/posts.json`, this.listOfPosts)
       .subscribe(response => {
         console.log(response);
         this.listChangedEvent.emit(this.listOfPosts.slice());
@@ -64,7 +64,7 @@ export class PostService {
     this.listOfPosts[index].numberOfLikes++;
     
     // Update the post in Firebase
-    this.http.put(`https://apistarfinalproj-default-rtdb.asia-southeast1.firebasedatabase.app/posts/${index}.json`, this.listOfPosts[index])
+    this.http.put(`https://gutierrez-firebase-default-rtdb.asia-southeast1.firebasedatabase.app/posts/${index}.json`, this.listOfPosts[index])
       .subscribe(() => {
         console.log('Post updated in Firebase');
       });
@@ -82,7 +82,7 @@ export class PostService {
     this.listOfPosts[index].comments.push(comment);
     
     // Update the post in Firebase
-    this.http.put(`https://apistarfinalproj-default-rtdb.asia-southeast1.firebasedatabase.app/posts/${index}.json`, this.listOfPosts[index])
+    this.http.put(`https://gutierrez-firebase-default-rtdb.asia-southeast1.firebasedatabase.app/posts/${index}.json`, this.listOfPosts[index])
       .subscribe(() => {
         console.log('Post updated in Firebase');
       });
@@ -92,7 +92,7 @@ export class PostService {
     this.listOfPosts[postIndex].comments[commentIndex] = newComment;
   
     // Update the post in Firebase
-    this.http.put(`https://apistarfinalproj-default-rtdb.asia-southeast1.firebasedatabase.app/posts/${postIndex}.json`, this.listOfPosts[postIndex])
+    this.http.put(`https://gutierrez-firebase-default-rtdb.asia-southeast1.firebasedatabase.app/posts/${postIndex}.json`, this.listOfPosts[postIndex])
       .subscribe(() => {
         console.log('Comment updated in Firebase');
       });
@@ -102,7 +102,7 @@ export class PostService {
     this.listOfPosts[postIndex].comments.splice(commentIndex, 1);
   
     // Update the post in Firebase
-    this.http.put(`https://apistarfinalproj-default-rtdb.asia-southeast1.firebasedatabase.app/posts/${postIndex}.json`, this.listOfPosts[postIndex])
+    this.http.put(`https://gutierrez-firebase-default-rtdb.asia-southeast1.firebasedatabase.app/posts/${postIndex}.json`, this.listOfPosts[postIndex])
       .subscribe(() => {
         console.log('Comment deleted from Firebase');
       });
@@ -112,7 +112,7 @@ export class PostService {
     this.listOfPosts[index].numberOfDislikes++;
   
     // Update the post in Firebase
-    this.http.put(`https://apistarfinalproj-default-rtdb.asia-southeast1.firebasedatabase.app/posts/${index}.json`, this.listOfPosts[index])
+    this.http.put(`https://gutierrez-firebase-default-rtdb.asia-southeast1.firebasedatabase.app/posts/${index}.json`, this.listOfPosts[index])
       .subscribe(() => {
         console.log('Post updated in Firebase');
       });

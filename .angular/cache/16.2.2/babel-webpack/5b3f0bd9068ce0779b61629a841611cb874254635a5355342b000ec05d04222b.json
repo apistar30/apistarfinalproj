@@ -1,0 +1,1 @@
+{"ast":null,"code":"export {};","map":{"version":3,"names":[],"sources":["C:\\Users\\gutie\\angularProjects\\crud\\src\\app\\register\\register.component.ts"],"sourcesContent":["import { Router } from '@angular/router';"],"mappings":""},"metadata":{},"sourceType":"module","externalDependencies":[]}
