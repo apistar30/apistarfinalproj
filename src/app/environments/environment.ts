@@ -1,12 +1,11 @@
 export const environment = {
     production: false,
     firebaseConfig: {
-        apiKey: "AIzaSyB6BVF4a8U13WQ8nrasWBPI9sHLZz72ugQ",
-        authDomain: "gutierrez-firebase.firebaseapp.com",
-        databaseURL: "https://gutierrez-firebase-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "gutierrez-firebase",
-        storageBucket: "gutierrez-firebase.appspot.com",
-        messagingSenderId: "485807502694",
-        appId: "1:485807502694:web:e5bdce9d310c11127c84a7"
-    }
+        apiKey: "AIzaSyCNoL1c_6kWPC9wSTez6q6o7MP-cjuJcXI",
+        authDomain: "apistarfinalproj.firebaseapp.com",
+        projectId: "apistarfinalproj",
+        storageBucket: "apistarfinalproj.appspot.com",
+        messagingSenderId: "577480478699",
+        appId: "1:577480478699:web:70fdcf5bcdfd87b63b93ae"
+      }
   };
